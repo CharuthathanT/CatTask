@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container
+        {
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+        .card
+        {
+            border: 1px solid black;
+            border-radius: 12px;
+            width: 300px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(88, 88, 88);
+            line-height: 2rem;
+            font-size: 30px;
+        }
+        .btn
+        {
+            width: 50px;
+            border-radius: 4px;
+            color: white;
+        }
+        #off
+        {
+            background-color: grey;
+        }
+        #on
+        {
+            background-color: green;
+        }
+        span{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <img id="light" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" height="200px" width="200px" alt="">
+        </div>
+        <div>
+            <img id="img1" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png" height="200px" width="200px" alt="">
+        </div>
+        <div class="card">
+            <span id="text">Switch Off</span>
+            <div>
+                <button class="btn" id="off" onclick="off()">OFF</button>
+                <button class="btn" id="on" onclick="on()">ON</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function off()
+        {
+            document.getElementById("img1").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png";
+            document.getElementById("light").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+            document.getElementById("off").style.backgroundColor="grey"
+            document.getElementById("on").style.backgroundColor="green"
+            document.getElementById("text").innerHTML="Switched Off"
+        }
+        function on()
+        {
+            document.getElementById("img1").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png";
+            document.getElementById("light").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+            document.getElementById("on").style.backgroundColor="grey"
+            document.getElementById("off").style.backgroundColor="red"
+            document.getElementById("text").innerHTML="Switched On"
+
+        }
+    </script>
+</body>
+</html>
